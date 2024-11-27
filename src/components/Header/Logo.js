@@ -1,7 +1,7 @@
 // components/Header.js
 import Image from 'next/image';
-import styles from './Header.module.scss';
-import MySvg from '../../../public/static/sociolite.svg'
+import styles from './Logo.module.scss';
+
 
 const Header = () => {
 
@@ -16,17 +16,7 @@ const Header = () => {
           height={200} 
         />
       </div>
-      <div className={`styles.centerImage`}>
-        {/* <svg>
-          <rect>
-
-          </rect>
-        </svg> */}
-        <MySvg
-        width= {800} height={600} 
-        />
-
-      </div>
+     
     </header>
   );
 };

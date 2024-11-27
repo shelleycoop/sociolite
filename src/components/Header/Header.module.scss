@@ -1,0 +1,22 @@
+.header {
+  display: flex; // Use flexbox for layout
+  align-items: center; // Vertically align items
+  justify-content: space-between; // Space out elements (Logo on the left, Sociolite in the center)
+
+  height: 600px; // Set a consistent height for the navbar
+  padding: 0 20px; // Optional: Add horizontal padding
+  background-color: #FFCF56; // Optional: Navbar background color
+}
+
+.header > :nth-child(1) {
+  height: 600px;
+  
+}
+
+.header > :nth-child(2) {
+  // Center Sociolite
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 40px;
+}

@@ -1,8 +1,35 @@
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: #FFCF56;  // This is a bright yellow color
+  
+   // This is a bright yellow color
+}
+.header {
+  display: flex; // Use flexbox for layout
+  align-items: center; // Vertically align items
+  justify-content: space-between; // Space out elements (Logo on the left, Sociolite in the center)
+
+  height: 80px; // Adjust the height of the navbar to fit images
+  padding: 10px 20px; // Add some padding for spacing
+  background-color: #FFCF56;
+
+  position: relative; // Ensure child elements with absolute positioning behave as expected
+  overflow: visible; // Allow images to be fully visible
+}
+
+.header > :nth-child(1) {
+  // Styles for the Logo component
+}
+
+.header > :nth-child(2) {
+  // Center Sociolite
+  margin-top: 20px;
+  position: right;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%; // Ensure proper vertical alignment
+  transform: translate(-50%, -50%); // Center horizontally and vertically
+}
+body {
+  margin: 0; // Ensure no default margin at the top of the page
+  padding: 0; // Ensure no padding that may interfere
 }

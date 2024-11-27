@@ -1,0 +1,38 @@
+// styles/float.module.scss
+
+@keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  
+    .svg-wrapper {
+      svg {
+        width: 200px;
+        height: auto;
+  
+        .char1 {
+          animation: float 3s infinite ease-in-out;
+        }
+  
+        .char2 {
+          animation: float 4s infinite ease-in-out;
+        }
+  
+        .char3 {
+          animation: float 5s infinite ease-in-out;
+        }
+      }
+    }
+  }
+  
