@@ -1,38 +1,23 @@
-// styles/float.module.scss
-
 @keyframes float {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
+  0% {
+    transform: translateY(0);
   }
-  
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-  
-    .svg-wrapper {
-      svg {
-        width: 200px;
-        height: auto;
-  
-        .char1 {
-          animation: float 3s infinite ease-in-out;
-        }
-  
-        .char2 {
-          animation: float 4s infinite ease-in-out;
-        }
-  
-        .char3 {
-          animation: float 5s infinite ease-in-out;
-        }
-      }
-    }
+  50% {
+    transform: translateY(-10px); /* Move up */
   }
-  
+  100% {
+    transform: translateY(0); /* Return to original position */
+  }
+}
+
+#char1, #char2 {
+  animation: float 4s ease-in-out infinite;
+}
+
+#char1 {
+  animation-delay: 0s; /* Staggered animation */
+}
+
+#char2 {
+  animation-delay: 2s;
+}

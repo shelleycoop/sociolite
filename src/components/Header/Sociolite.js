@@ -1,4 +1,5 @@
 import MySvg from '../../../public/static/sociolite.svg'
+import styles  from "./Sociolite.module.scss"
 
 import React from 'react'
 
