@@ -5,7 +5,7 @@ import React from 'react'
 
 const Sociolite = () => {
   return (
-    <div className={`styles.centerImage`}>
+    <div>
       
     <MySvg
     width= {800} height={600} 

@@ -1,7 +1,9 @@
+import styles from "./Main.module.scss"
+
 const Main = () => {
-    return ( <main>
-        <h1>Launching Soon</h1>
-        <h1>Stay Tuned</h1>
+    return ( <main className="section-title">
+        <h1>LAUNCHING SOON!</h1>
+        <h1>STAY TUNED</h1>
       </main>
     )
    

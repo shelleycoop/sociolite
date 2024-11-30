@@ -1,35 +1,55 @@
 
-body {
-  
-   // This is a bright yellow color
-}
+
 .header {
-  display: flex; // Use flexbox for layout
-  align-items: center; // Vertically align items
-  justify-content: space-between; // Space out elements (Logo on the left, Sociolite in the center)
-
-  height: 80px; // Adjust the height of the navbar to fit images
-  padding: 10px 20px; // Add some padding for spacing
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: #FFCF56;
-
-  position: relative; // Ensure child elements with absolute positioning behave as expected
-  overflow: visible; // Allow images to be fully visible
-}
-
-.header > :nth-child(1) {
-  // Styles for the Logo component
+  position: relative; 
+  overflow: visible; 
+  margin: 0;
 }
 
 .header > :nth-child(2) {
-  // Center Sociolite
-  margin-top: 20px;
   position: right;
   left: 50%;
   transform: translateX(-50%);
-  top: 50%; // Ensure proper vertical alignment
-  transform: translate(-50%, -50%); // Center horizontally and vertically
+  top: 50%; 
+  transform: translate(-50%, -50%); 
 }
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Move up */
+  }
+  100% {
+    transform: translateY(0); /* Return to original position */
+  }
+}
+
+div g:first-child, g:nth-child(1), g:nth-child(6) , g:nth-child(3), g:nth-child(4), g:nth-child(5), g:nth-child(7),
+ g:nth-child(8), g:nth-child(9), g:nth-child(10), g:nth-child(2),
+ #char2 {
+  animation: float 4s ease-in-out infinite;
+}
+
+@font-face {
+  font-family: 'Slabien';
+  src: url('/fonts/slabien.woff2') format('woff2'),
+       url('/fonts/slabien.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  margin: 0; // Ensure no default margin at the top of the page
-  padding: 0; // Ensure no padding that may interfere
+  
+  font-family: 'Slabien', serif;
+}
+
+.section-title{
+  color: #538098;
+  background-color: #BF9A3C;
 }
