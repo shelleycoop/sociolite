@@ -45,11 +45,23 @@ div g:first-child, g:nth-child(1), g:nth-child(6) , g:nth-child(3), g:nth-child(
 }
 
 body {
-  
+  font-size: 36px;
   font-family: 'Slabien', serif;
 }
 
 .section-title{
   color: #538098;
   background-color: #BF9A3C;
+}
+
+
+
+.green {
+  color: #0B5837;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

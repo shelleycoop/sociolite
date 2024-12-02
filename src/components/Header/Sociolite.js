@@ -5,7 +5,7 @@ import React from 'react'
 
 const Sociolite = () => {
   return (
-    <div>
+    <div style={{marginTop: "80px"}}>
       
     <MySvg
     width= {800} height={600} 
