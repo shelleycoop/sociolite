@@ -1,24 +1,26 @@
 
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #FFCF56;
-  position: relative; 
-  overflow: visible; 
-  margin: 0;
-}
+// .header {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   background-color: #FFCF56;
+//   position: relative; 
+//   overflow: visible; 
+//   margin: 0;
+// }
 
-.header > :nth-child(2) {
-  position: right;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 50%; 
-  transform: translate(-50%, -50%); 
-}
-
-@keyframes float {
+// .header > :nth-child(2) {
+//   position: right;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   top: 50%; 
+//   transform: translate(-50%, -50%); 
+// }
+// svg {
+//   overflow: visible;
+// }
+@keyframes float1 {
   0% {
     transform: translateY(0);
   }
@@ -26,20 +28,60 @@
     transform: translateY(-10px); /* Move up */
   }
   100% {
-    transform: translateY(0); /* Return to original position */
+    transform: translateY(0px); /* Return to original position */
   }
 }
 
-div g:first-child, g:nth-child(1), g:nth-child(6) , g:nth-child(3), g:nth-child(4), g:nth-child(5), g:nth-child(7),
- g:nth-child(8), g:nth-child(9), g:nth-child(10), g:nth-child(2),
- #char2 {
-  animation: float 4s ease-in-out infinite;
+@keyframes float2 {
+  0% {
+    transform: translateX(-7px);
+  }
+  50% {
+    transform: translateX(7px); /* Move up */
+  }
+  100% {
+    transform: translateX(-7px); /* Return to original position */
+  }
 }
+
+div g:nth-child(2) g:nth-child(1) {
+  animation: float1 5s ease-in-out infinite;
+}
+
+div g:nth-child(2) g:nth-child(2) {
+  animation: float1 8s ease-in-out infinite;
+}
+
+div g:nth-child(2) g:nth-child(3) {
+  animation: float1 6s ease-in-out infinite;
+}
+
+div g:nth-child(2) g:nth-child(4) {
+  animation: float1 7s ease-in-out infinite;
+}
+
+div g:nth-child(2) g:nth-child(5) {
+  animation: float1 8s ease-in-out infinite;
+}
+div g:nth-child(2) g:nth-child(6) {
+  animation: float1 5s ease-in-out infinite;
+}
+div g:nth-child(2) g:nth-child(7) {
+  animation: float1 8s ease-in-out infinite;
+}
+div g:nth-child(2) g:nth-child(8) {
+  animation: float2 5s ease-in-out infinite;
+}
+// div g:nth-child() {
+//   animation: float 6s ease-in-out infinite;
+// }
+
+
 
 @font-face {
   font-family: 'Slabien';
-  src: url('/fonts/slabien.woff2') format('woff2'),
-       url('/fonts/slabien.woff') format('woff');
+  src: url('/fonts/slabien-regular.ttf') format('truetype');
+       
   font-weight: normal;
   font-style: normal;
 }
@@ -64,4 +106,5 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
