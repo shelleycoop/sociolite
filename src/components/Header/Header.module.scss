@@ -5,7 +5,12 @@
 
   height: 600px; // Set a consistent height for the navbar
   background-color: #FFCF56; // Optional: Navbar background color
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
 }
+
+
 
 .header > :nth-child(1) {
   height: 600px;

@@ -16,3 +16,21 @@ styles.centerImage {
     }
   }
   
+  .sociolite-svg {
+    width: 100%; // Default full width for flexibility
+    max-width: 300px; // Restrict maximum size
+    height: auto; // Maintain aspect ratio
+    margin: 0 auto; // Center the SVG if needed
+    display: block; // Ensure proper alignment
+  
+    // Adjustments for larger screens
+    @media screen and (min-width: 768px) {
+      max-width: 400px; // Slightly larger on tablets
+    }
+  
+    // Adjustments for desktops
+    @media screen and (min-width: 1024px) {
+      max-width: 500px; // Larger size for desktops
+    }
+  }
+  

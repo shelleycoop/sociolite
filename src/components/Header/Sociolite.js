@@ -5,10 +5,10 @@ import React from 'react'
 
 const Sociolite = () => {
   return (
-    <div style={{marginTop: "80px"}}>
+    <div>
       
     <MySvg
-    width= {800} height={600} 
+    className='sociolite-svg'
     />
 
   </div>

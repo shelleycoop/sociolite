@@ -1,25 +1,3 @@
-
-
-// .header {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   background-color: #FFCF56;
-//   position: relative; 
-//   overflow: visible; 
-//   margin: 0;
-// }
-
-// .header > :nth-child(2) {
-//   position: right;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   top: 50%; 
-//   transform: translate(-50%, -50%); 
-// }
-// svg {
-//   overflow: visible;
-// }
 @keyframes float1 {
   0% {
     transform: translateY(0);
@@ -72,9 +50,6 @@ div g:nth-child(2) g:nth-child(7) {
 div g:nth-child(2) g:nth-child(8) {
   animation: float2 5s ease-in-out infinite;
 }
-// div g:nth-child() {
-//   animation: float 6s ease-in-out infinite;
-// }
 
 
 
@@ -107,4 +82,135 @@ body {
   padding: 0;
   box-sizing: border-box;
 
+}
+
+/* Global Variables and Mixins */
+$breakpoints: (
+  'xs': 480px,   // Extra small devices
+  'sm': 768px,   // Small devices (tablets)
+  'md': 1024px,  // Medium devices (laptops)
+  'lg': 1280px,  // Large devices (desktops)
+  'xl': 1440px   // Extra large devices
+);
+
+@mixin respond-to($size) {
+  @media (max-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+
+body {
+  line-height: 1.6;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  
+
+  @include respond-to('sm') {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .sociolite {
+    flex: 1;
+
+    @include respond-to('sm') {
+      margin-top: 1rem;
+    }
+  }
+}
+
+/* Main Section Styles */
+.section-title {
+  text-align: left;
+  
+
+  @include respond-to('sm') {
+    text-align: center;
+  
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+  // color: #333;
+
+  @include respond-to('sm') {
+    font-size: 2rem;
+  }
+}
+
+.green {
+  color: green;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include respond-to('sm') {
+    align-items: center;
+  }
+
+  input {
+    width: 540px;
+    height: 54px;
+    
+    padding: 0px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    @include respond-to('sm') {
+      width: 80%;
+    }
+  }
+
+  button {
+    height: 54px;
+  
+    background-color: #538098;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: #416d7a;
+    }
+  }
+}
+
+p {
+
+  font-size: 1rem;
+  color: #555;
+
+  @include respond-to('sm') {
+    text-align: center;
+  }
+}
+
+/* Floating Element Styles */
+.float {
+  
+  right: 1rem;
+  bottom: 1rem;
+
+  @include respond-to('sm') {
+    width: 40%;
+  
+  }
 }
